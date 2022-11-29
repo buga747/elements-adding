@@ -12,9 +12,11 @@ btnAddEl.addEventListener("click", onElementAdd);
 
 function onElementAdd() {
   const elementToAdd = [];
+  let color = getRandomHexColor();
   const newElement = document.createElement("div");
   newElement.classList.add("element");
-  newElement.style.backgroundColor = getRandomHexColor();
+  newElement.textContent = color;
+  newElement.style.backgroundColor = color;
   elementToAdd.push(newElement);
   containerEl.append(...elementToAdd);
 }
