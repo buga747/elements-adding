@@ -46,8 +46,8 @@ function onCreatingElements(value) {
     const newElement = document.createElement("button");
     newElement.classList.add("element");
     newElement.textContent = color;
+    newElement.setAttribute("type", "button");
     newElement.style.backgroundColor = color;
-    newElement.setAttribute.type = "button";
     elementsToAdd.push(newElement);
   }
   return elementsToAdd;
