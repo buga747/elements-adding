@@ -13,7 +13,7 @@ btnAddEl.addEventListener("click", onElementAdd);
 function onElementAdd() {
   const elementToAdd = [];
   let color = getRandomHexColor();
-  const newElement = document.createElement("div");
+  const newElement = document.createElement("button");
   newElement.classList.add("element");
   newElement.textContent = color;
   newElement.style.backgroundColor = color;
@@ -35,4 +35,20 @@ btnClearEl.addEventListener("click", onElementsClear);
 
 function onElementsClear() {
   containerEl.innerHTML = "";
+}
+
+// deleting element by clicking on it
+
+containerEl.addEventListener("click", deletingClickedElement);
+
+function deletingClickedElement(evt) {
+  const isBoxEl = evt.target.nodeName === "BUTTON";
+
+  if (!isBoxEl) {
+    console.log("ololo");
+    return;
+  }
+
+  const selectedElement = evt.target;
+  selectedElement.remove();
 }

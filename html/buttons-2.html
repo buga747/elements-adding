@@ -6,10 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 
 <body>
+    <ul>
+        <li><a class="link" href="../index.html">Go back</a>
+        </li>
+    </ul>
+
+    <div class="buttons-container">
+
+        <input class="input js-input-add" type="number" min="1" max="100" step="1"
+            placeholder="Enter number between 1 to 100" />
+
+        <button class="btn btn-add" type="button" data-create>Create <span class="js-create-amount"></span>
+            elements</button>
+        <button class="btn btn-clear" type="button" data-destroy>Destroy all</button>
+        <button class="btn btn-remove" type="button" data-remove>Remove <span class="js-remove-amount"></span>
+            elements</button>
+        <input class="input js-input-remove" type="number" placeholder="Enter number of el to remove" />
+
+    </div>
+
+
 
 
     <div class="btn-container"></div>
